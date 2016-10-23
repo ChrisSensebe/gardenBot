@@ -1,0 +1,10 @@
+{
+  "name": "gardenBotServer",
+  "version": "0.0.1",
+  "author": "ChrisSensebe christophe.sensebe@gmail.com",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "serialport": "^4.0.3"
+  }
+}
