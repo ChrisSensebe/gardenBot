@@ -14,7 +14,7 @@ var serialPort = new SerialPort('/dev/ttyACM0', {
 });
 
 app.get('/', function (req, res) {
-    res.send('<h1>Garden Bot</h1>');
+    res.sendFile(__dirname + '/index.html');
 });
 
 // responding to events
