@@ -26,6 +26,10 @@ serialPort.on('open', function () {
    });
 });
 
+io.on('connection', function (socket) {
+   console.log('user connected');
+});
+
 http.listen(3000, function () {
     console.log('Garden bot server listening on port 3000');
 });
