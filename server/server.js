@@ -14,6 +14,7 @@ var serialPort = new SerialPort('/dev/ttyACM0', {
 serialPort.on('open', function () {
    console.log('Serial port open');
    serialPort.on('data', function (data) {
+       console.log(Date.now());
        console.log(data);
    });
 });
