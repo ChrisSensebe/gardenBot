@@ -21,13 +21,16 @@ app.get('/', function (req, res) {
 serialPort.on('open', function () {
    console.log('Serial port open');
    serialPort.on('data', function (data) {
-       console.log(Date.now());
        console.log(data);
+       io.emit('data', {
+           data: data,
+           date: Date.now()
+       })
    });
 });
 
-io.on('connection', function (socket) {
-   console.log('user connected');
+io.on('connection', function () {
+   console.log('client connected');
 });
 
 http.listen(3000, function () {
